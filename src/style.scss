@@ -1,0 +1,248 @@
+$primary: #05352c;
+$secondary: #c6af4f;
+$mix: #66723e;
+$red: #aa5560;
+
+.hide {
+  display: none;
+}
+
+.background__bar {
+  background: $primary;
+}
+
+.bigbar {
+  position: relative;
+  z-index: 50;
+}
+
+.app {
+  font-family: "Satoshi", sans-serif;
+
+  .container {
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    //LOGIN AND REGISTER
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      img {
+        width: 7.5rem;
+        margin-bottom: 0.65rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 0.65rem;
+        width: 20rem;
+        gap: 1.25rem;
+      }
+
+      .login__button {
+        width: 20rem;
+        background-color: $primary;
+        padding: 0.65rem;
+        font-size: medium;
+        border-radius: 3px;
+        color: white;
+      }
+
+      input {
+        padding: 0.65rem;
+        border: none;
+        border-bottom: 1px solid gray;
+        border-radius: 3px;
+      }
+      input:focus {
+        outline: none;
+      }
+
+      p {
+        color: $red;
+        text-align: center;
+      }
+    }
+
+    //NAVBAR
+
+    .navbar {
+      background-color: $primary;
+      padding-left: 0.65rem;
+      padding-right: 0.65rem;
+      padding-top: 0.325rem;
+      padding-bottom: 0.325rem;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        width: 5rem;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .links {
+        display: none;
+      }
+      .burger {
+        width: 2rem;
+        color: white;
+      }
+      .burger:hover {
+        cursor: pointer;
+      }
+    }
+    .burger__list {
+      opacity: 90%;
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      background-color: $primary;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-200%);
+      transition: all 0.5s;
+
+      .link {
+        margin: 1px 0 1px 0;
+        padding-top: 0.325rem;
+        padding-bottom: 0.325rem;
+        background-color: #115b4d;
+        width: 100%;
+        text-align: center;
+        transition: all 0.2s;
+      }
+      .link:hover {
+        background-color: $primary;
+      }
+
+      .user__info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .profile {
+        padding-top: 0.325rem;
+        padding-bottom: 0.325rem;
+        width: 48.5%;
+        margin-left: 1%;
+        background-color: #115b4d;
+        text-align: center;
+        transition: all 0.2s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $primary;
+        }
+      }
+      .logout {
+        padding-top: 0.325rem;
+        padding-bottom: 0.325rem;
+        width: 48.5%;
+        margin-right: 1%;
+        text-align: center;
+        background-color: $red;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: all 0.2s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #83424a;
+        }
+      }
+
+      .write {
+        text-decoration: none;
+        color: white;
+        background-color: $secondary;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        padding-top: 0.325rem;
+        padding-bottom: 0.325rem;
+        transition: all 0.2s;
+      }
+      .write:hover {
+        background-color: #8d7c38;
+      }
+    }
+
+    .burger__list.active {
+      transform: translateY(0);
+    }
+
+    @media (min-width: 768px) {
+      .navbar {
+        .links {
+          display: flex;
+          gap: 1.2rem;
+          font-size: 0.85rem;
+          color: white;
+        }
+        .link {
+          transition: 0.2s;
+        }
+        .link:hover {
+          color: $secondary;
+        }
+        .write {
+          color: $secondary;
+          font-weight: 600;
+        }
+        .burger {
+          display: none;
+        }
+      }
+      .burger__list {
+        display: none;
+      }
+    }
+
+    //FOOTER
+    footer {
+      color: black;
+      margin-top: 6.25rem;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .arrow {
+        font-size: 1rem;
+        display: block;
+        background-color: $secondary;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: all 0.2s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #8d7c38;
+        }
+
+        svg {
+          width: 1.5rem;
+          color: white;
+        }
+      }
+      img {
+        width: 3.125rem;
+      }
+    }
+  }
+}
