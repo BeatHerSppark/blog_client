@@ -379,10 +379,53 @@ $red: #aa5560;
           .post {
             .content {
               h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
               }
               p {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .home {
+        .posts {
+          margin-top: 6.25rem;
+          flex-direction: row;
+          flex-wrap: wrap;
+          .post {
+            &:nth-child(2n + 1) {
+              flex-direction: row;
+            }
+            max-width: 580px;
+            .content {
+              h1 {
+                font-size: 1.825rem;
+              }
+              p {
+                font-size: 1.25rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .home {
+        .posts {
+          margin-top: 6.25rem;
+          .post {
+            max-width: 640px;
+            .content {
+              h1 {
+                font-size: 2.5rem;
+              }
+              p {
+                font-size: 1.25rem;
               }
             }
           }
@@ -421,6 +464,23 @@ $red: #aa5560;
 
           span {
             font-weight: bold;
+          }
+        }
+
+        .edit {
+          display: flex;
+          gap: 5px;
+
+          .button__edit {
+            background-color: $secondary;
+            color: white;
+            padding: 5px 10px;
+          }
+
+          .button__delete {
+            background-color: $red;
+            color: white;
+            padding: 5px 10px;
           }
         }
       }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Single = () => {
   return (
@@ -14,10 +15,35 @@ const Single = () => {
             alt=""
           />
           <div className="info">
-            <span>John</span>
+            <span>Gilbert</span>
             <p>Posted 2 days ago</p>
           </div>
+          <div className="edit">
+            <Link to={`/write?edit=2`}>
+              <button className="button__edit">Edit</button>
+            </Link>
+            <button className="button__delete">Delete</button>
+          </div>
         </div>
+        <h1>Lorem ipsum dolor blablablalbalbalba</h1>
+        <p>
+          For instance, HubSpot blogs about various topics concerning marketing,
+          sales, and service because HubSpot sells products related to those
+          three subjects -- so, more than likely, the type of readers HubSpot's
+          blog attracts are going to be similar to HubSpot's core buyer persona.
+          <br />
+          <br />
+          Alternatively, a woman named Kiki started a personal travel blog,
+          called The Blonde Abroad, to document her travel experiences and
+          provide readers with helpful tips and travel recommendations. Her blog
+          doesn't serve a larger company, but it does help her create a personal
+          brand.
+          <br />
+          <br />
+          If a personal blog is successful enough, the writer can also make
+          money off of it via sponsorships or advertisements. Take a look at 5
+          Strategies to Monetize a Blog to learn more.
+        </p>
       </div>
       <div className="menu">m</div>
     </div>
