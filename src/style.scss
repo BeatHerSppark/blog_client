@@ -422,10 +422,10 @@ $red: #aa5560;
             max-width: 640px;
             .content {
               h1 {
-                font-size: 2.5rem;
+                font-size: 2.25rem;
               }
               p {
-                font-size: 1.25rem;
+                font-size: 1.125rem;
               }
             }
           }
@@ -436,12 +436,14 @@ $red: #aa5560;
     //SINGLE
 
     .single {
-      margin-top: 3.125rem;
       display: flex;
+      flex-direction: column;
       gap: 3.125rem;
 
       .content {
-        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3125rem;
 
         img {
           width: 100%;
@@ -454,6 +456,7 @@ $red: #aa5560;
           align-items: center;
           gap: 10px;
           font-size: 0.875rem;
+          color: #555;
 
           img {
             width: 3.125rem;
@@ -483,9 +486,106 @@ $red: #aa5560;
             padding: 5px 10px;
           }
         }
+
+        h1 {
+          font-size: 1rem;
+          color: #333;
+        }
+        p {
+          font-size: 0.875rem;
+          text-align: justify;
+          line-height: 1.3125rem;
+        }
       }
       .menu {
-        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3125rem;
+
+        h1 {
+          font-size: 1rem;
+          color: #555;
+        }
+
+        h2 {
+          font-size: 1rem;
+          color: #555;
+        }
+
+        .post {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.625rem;
+
+          img {
+            width: 100%;
+            height: 15rem;
+            object-fit: cover;
+          }
+
+          button {
+            color: $secondary;
+            border: 1px solid $secondary;
+            padding: 5px 10px;
+            transition: 0.2s;
+
+            &:hover {
+              background-color: $secondary;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .single {
+        flex-direction: row;
+        gap: 3.125rem;
+
+        .content {
+          flex: 6;
+
+          .user {
+            font-size: 1rem;
+
+            .info {
+              p {
+                font-size: 0.875rem;
+              }
+            }
+          }
+
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1.125rem;
+            text-align: justify;
+            line-height: 1.6875rem;
+          }
+        }
+        .menu {
+          margin-top: 1.3125rem;
+          flex: 3;
+
+          h1 {
+            font-size: 1.25rem;
+          }
+
+          h2 {
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .single {
+        .content {
+          flex: 8;
+        }
       }
     }
   }

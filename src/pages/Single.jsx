@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Menu from "../components/Menu";
 
 const Single = () => {
   return (
@@ -45,7 +46,7 @@ const Single = () => {
           Strategies to Monetize a Blog to learn more.
         </p>
       </div>
-      <div className="menu">m</div>
+      <Menu />
     </div>
   );
 };
