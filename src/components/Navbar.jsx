@@ -5,7 +5,7 @@ import logo from "../img/logo_cropped.png";
 
 const Navbar = () => {
   const [hideMenu, setHideMenu] = useState(true);
-  const handleClick = (e) => {
+  const toggleMenu = (e) => {
     setHideMenu((current) => !current);
   };
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
             <img src={logo} alt="logo" />
           </div>
           <div className="menu">
-            <div className="burger" onClick={handleClick}>
+            <div className="burger" onClick={toggleMenu}>
               <Hamburger hideMenu={hideMenu} />
             </div>
             <div className="links">
@@ -48,22 +48,22 @@ const Navbar = () => {
           </div>
         </div>
         <div className={hideMenu ? "burger__list" : "burger__list active"}>
-          <Link to="/?cat=recipes" className="link">
+          <Link to="/?cat=recipes" className="link" onClick={toggleMenu}>
             RECIPES
           </Link>
-          <Link to="/?cat=reviews" className="link">
+          <Link to="/?cat=reviews" className="link" onClick={toggleMenu}>
             REVIEWS
           </Link>
-          <Link to="/?cat=bftm" className="link">
+          <Link to="/?cat=bftm" className="link" onClick={toggleMenu}>
             BEST FOR THE MONTH
           </Link>
-          <Link to="/?cat=whiskey" className="link">
+          <Link to="/?cat=whiskey" className="link" onClick={toggleMenu}>
             WHISK(E)Y
           </Link>
-          <Link to="/?cat=foryou" className="link">
+          <Link to="/?cat=foryou" className="link" onClick={toggleMenu}>
             FOR YOU
           </Link>
-          <Link to="/write" className="write">
+          <Link to="/write" className="write" onClick={toggleMenu}>
             Write
           </Link>
           <span className="user__info">
