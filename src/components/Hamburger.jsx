@@ -9,7 +9,7 @@ const Hamburger = ({ hideMenu }) => {
         <div className="hamburger__box burger3" />
       </div>
 
-      <style jsx>{`
+      <style jsx="true">{`
         .hamburger {
           width: 2rem;
           height: 2rem;

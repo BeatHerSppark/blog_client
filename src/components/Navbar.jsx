@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 import logo from "../img/logo_cropped.png";
+import { AuthContext } from "../context/authContext";
 
 const Navbar = () => {
+  const { currentUser, logout } = useContext(AuthContext);
+
   const [hideMenu, setHideMenu] = useState(true);
   const toggleMenu = (e) => {
     setHideMenu((current) => !current);
@@ -37,8 +40,14 @@ const Navbar = () => {
                 FOR YOU
               </Link>
               <p>|</p>
-              <span>Beator</span>
-              <span>Logout</span>
+              <span>{currentUser?.username}</span>
+              {currentUser ? (
+                <span onClick={logout}>Logout</span>
+              ) : (
+                <Link className="link" to="/login">
+                  Login
+                </Link>
+              )}
               <span className="write">
                 <Link to="/write" className="link write">
                   Write
@@ -67,7 +76,7 @@ const Navbar = () => {
             Write
           </Link>
           <span className="user__info">
-            <div className="profile">Beator</div>
+            <div className="profile">{currentUser?.username}</div>
             <div className="logout">Logout</div>
           </span>
         </div>
