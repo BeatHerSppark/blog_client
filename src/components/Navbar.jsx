@@ -17,7 +17,9 @@ const Navbar = () => {
       <div className="bigbar">
         <div className="navbar">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
           <div className="menu">
             <div className="burger" onClick={toggleMenu}>
